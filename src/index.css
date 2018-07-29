@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: transparent url("./wood-tiles-horizontal.jpg") repeat fixed;
+  font-family: sans-serif;
+}
+
+.ghost-hex {
+  transform: translate(-100000px, -100000px);
+}

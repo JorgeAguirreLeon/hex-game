@@ -1,0 +1,12 @@
+.player-hex {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.player-hex[data-player="1"] {
+  margin-right: 30px;
+}
+
+.player-hex[data-player="2"] {
+  margin-left: 30px;
+}

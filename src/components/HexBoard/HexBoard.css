@@ -1,0 +1,16 @@
+.hex-board {
+  box-shadow: 0 0 50px 10px rgba(0,0,0,0.95);
+  border-radius: 10px;
+  background: transparent url("./resources/wood-tiles-vertical.jpg") repeat fixed;
+  display: inline-block;
+  margin: 30px auto;
+  padding: 50px 0;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.hex-row {
+  height: 150px;
+  margin: 0px 10px;
+}

@@ -1,0 +1,227 @@
+.hex-container *,
+.hex-container *:before,
+.hex-container *:after {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.hex-container {
+  display: inline-block;
+  margin: 0px 5px;
+}
+
+.hex-board .hex-container {
+  vertical-align: middle;
+}
+
+.hex-container-empty {
+  display: inline-block;
+  height: 86.6px;
+  margin: 43.3px 5px;
+  width: 150px;
+}
+
+.hex-tile {
+  background-color: rgba(0,0,0,0);
+  border-left: solid 5px #333;
+  border-right: solid 5px #333;
+  display: inline-block;
+  height: 86.6px;
+  margin: 43.3px 0;
+  position: relative;
+  width: 150px;
+}
+
+.hex-tile:hover {
+  border-left: solid 5px #777;
+  border-right: solid 5px #777;
+}
+
+.hex-tile:before,
+.hex-tile:after {
+  background-color: inherit;
+  content: "";
+  height: 106.07px;
+  left: 18.5px;
+  position: absolute;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  width: 106.07px;
+  z-index: 1;
+}
+
+.hex-tile:before {
+  border-right: solid 7.0711px #333;
+  border-top: solid 7.0711px #333;
+  top: -53.033px;
+}
+
+.hex-tile:after {
+  border-bottom: solid 7.0711px #333;
+  border-left: solid 7.0711px #333;
+  bottom: -53.033px;
+}
+
+.hex-tile:hover *,
+.hex-tile:hover:before,
+.hex-tile:hover:after {
+  border-color: #777;
+}
+
+.hex-card {
+  background-position: center;
+  background-size: auto 161.6581px;
+  border-left: solid 5px #333;
+  border-right: solid 5px #333;
+  height: 86.6px;
+  margin: 43.3px 0;
+  position: relative;
+  text-align: left;
+  width: 150px;
+  z-index: 3;
+}
+
+.hex-card:hover {
+  cursor: url("./resources/grab-open.png"), pointer;
+}
+
+.hex-card:active {
+  cursor: url("./resources/grab-closed.png"), move;
+}
+
+.hex-card-top,
+.hex-card-bottom {
+  background: inherit;
+  height: 106.07px;
+  left: 16.97px;
+  overflow: hidden;
+  position: absolute;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  width: 106.07px;
+  z-index: 1;
+}
+
+.hex-card-top:after,
+.hex-card-bottom:after {
+  background: inherit;
+  content: "";
+  height: 80.82903768654762px;
+  position: absolute;
+  -webkit-transform: rotate(45deg) scaleY(1.7321) translateY(-40.4145px);
+  -ms-transform: rotate(45deg) scaleY(1.7321) translateY(-40.4145px);
+  transform: rotate(45deg) scaleY(1.7321) translateY(-40.4145px);
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  width: 140px;
+}
+
+.hex-card-top {
+  border-right: solid 7.0711px #333;
+  border-top: solid 7.0711px #333;
+  top: -53.033px;
+}
+
+.hex-card-top:after {
+  background-position: center top;
+}
+
+.hex-card-bottom {
+  border-bottom: solid 7.0711px #333;
+  border-left: solid 7.0711px #333;
+  bottom: -53.033px;
+}
+
+.hex-card-bottom:after {
+  background-position: center bottom;
+}
+
+.hex-card:after {
+  background: inherit;
+  content: "";
+  height: 80.829px;
+  left: 0;
+  position: absolute;
+  top: 2.8868px;
+  width: 140px;
+  z-index: 2;
+}
+
+.hex-card.player1 {
+  background-color: purple;
+}
+.hex-card.player2 {
+  background-color: brown;
+}
+
+.hex-card .card-health {
+  color: #008000;
+  font-size: 30px;
+  font-weight: bold;
+  left: 5px;
+  position: absolute;
+  text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+  top: 55px;
+  z-index: 4;
+}
+
+.hex-card .card-current-health {
+  color: #f00;
+  font-size: 30px;
+  font-weight: bold;
+  right: 5px;
+  position: absolute;
+  text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+  top: 55px;
+  z-index: 4;
+}
+
+.hex-card .card-attack {
+  color: #00f;
+  font-size: 30px;
+  font-weight: bold;
+  left: 5px;
+  position: absolute;
+  text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+  top: 5px;
+  z-index: 4;
+}
+
+.hex-card[data-player="1"] {
+  background-color: purple;
+}
+
+.hex-card[data-player="2"] {
+  background-color: brown;
+}
+
+.hex-card[data-attack-sides*="(W)"] {
+  border-left-color: #f00;
+}
+
+.hex-card[data-attack-sides*="(E)"] {
+  border-right-color: #f00;
+}
+
+.hex-card[data-attack-sides*="(NW)"] .hex-card-top {
+  border-top-color: #f00;
+}
+
+.hex-card[data-attack-sides*="(NE)"] .hex-card-top {
+  border-right-color: #f00;
+}
+
+.hex-card[data-attack-sides*="(SW)"] .hex-card-bottom {
+  border-left-color: #f00;
+}
+
+.hex-card[data-attack-sides*="(SE)"] .hex-card-bottom {
+  border-bottom-color: #f00;
+}
+
+.hex-card[data-image="slowpoke"] {
+  background-image: url("../../tiles/slowpoke.png");
+}

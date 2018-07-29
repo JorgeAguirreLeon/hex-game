@@ -1,0 +1,23 @@
+.hex-score {
+  margin-top: 15px;
+  position: absolute;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  width: 100%;
+}
+
+.player-score {
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.player-score[data-player="1"] {
+  color: purple;
+  float: left;
+  margin-left: 90px;
+}
+
+.player-score[data-player="2"] {
+  color: brown;
+  float: right;
+  margin-right: 90px;
+}
